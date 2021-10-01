@@ -9,11 +9,11 @@ import numpy as np
 import sklearn
 from sklearn.preprocessing import StandardScaler
 
-flask_app = Flask(__name__)
+app = Flask(__name__)
 model = pickle.load(open('random_forest_classifier.pkl', 'rb'))
 
 
-@flask_app.route("/")
+@app.route("/")
 @cross_origin()
 def home():
     return render_template("index.html")
@@ -21,7 +21,7 @@ def home():
 
 
 
-@flask_app.route("/predict", methods = ["GET", "POST"])
+@app.route("/predict", methods = ["GET", "POST"])
 @cross_origin()
 def predict():
     if request.method == "POST":
@@ -116,7 +116,7 @@ def predict():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    flask_app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port)
 
 
 
