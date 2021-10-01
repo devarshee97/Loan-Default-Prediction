@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOAN DEFAULT PREDICTION</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">LOAN DEFAULT PREDICTION</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Please enter your Annual Income</h5>
+                            <!-- Departure -->
+                            <input name="Annual_Income" id="Annual_Income" required="required">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">How many years have you worked current job</h5>
+                            <!-- Arrival -->
+                            <input  name="Years_in_current_job" id="Years_in_current_job" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title">How many tax liens have you received?</h5>
+                            <!-- Source -->
+                            <input  name="Tax_Liens" id="Tax_Liens" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">How many open accounts do you have?</h5>
+                            <!-- Destination -->
+                            <input  name="Open_accounts" id="Open_accounts" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Years of credit history</h5>
+                            <!-- Source -->
+                            <input  name="Years_of_credit_history" id="Years_of_credit_history" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Maximum open credit</h5>
+                            <!-- Destination -->
+                            <input  name="Maximum_open_credit" id="Maximum_open_credit" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Number of credit problems</h5>
+                            <!-- Source -->
+                            <input  name="Number_of_credit_problems" id="Number_of_credit_problems" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bankruptcies</h5>
+                            <!-- Destination -->
+                            <input  name="Bankruptcies" id="Bankruptcies" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Monthly debt?</h5>
+                            <!-- Source -->
+                            <input  name="Monthly_Debt" id="Monthly_Debt" required = "required">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Current loan amount</h5>
+                            <!-- Destination -->
+                            <input  name="Current_Loan_Amount" id="Current_Loan_Amount" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Current credit balance</h5>
+                            <!-- Source -->
+                            <input  name="Current_Credit_Balance" id="Current_Credit_Balance" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Credit Score</h5>
+                            <!-- Destination -->
+                            <input  name="Credit_Score" id="Credit_Score" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+             <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Your type of home ownership</h5>
+                            <!-- Source -->
+                            <select name="Home_Ownership" id="Home_Ownership" required="required">
+                                <option value="Own_Home"> Own_Home</option>
+                                <option value="Home_Mortgage">Home_Mortgage</option>
+                                <option value="Rent"> Rent </option>
+                                <option value="Have_Mortgage">Have_Mortgage</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Purpose of loan requirement</h5>
+                            <!-- Destination -->
+                            <select name="Purpose_label" id="Purpose_label" required="required">
+                                <option value="Recreation">Recreation</option>
+                                <option value="Loan_Debt">Loan_Debt</option>
+                                <option value="Personal">Personal</option>
+                                <option value="other">other</option>
+                                <option value="Expense">Expense</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Duration of loan requirement</h5>
+                            <!-- Airline -->
+                            <select name="Loan_Duration" id="Loan_Duration" required="required">
+                                <option value="Short_Term">Short Term</option>
+                                <option value="Long_Term">Long Term</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+        <p>©2021 Devarshee Sandilya</p>
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
