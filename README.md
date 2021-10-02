@@ -14,6 +14,6 @@ classification problems. I found this to be true here particularly after facing 
 
 ### Deployment:
 * Front-end prepared using generic HTML template
-* Back-end developed using Flask and deployed in Heroku - loandefpredic.herokuapp.com
+* Back-end developed using Flask and deployed in Heroku - https://loandefpredic.herokuapp.com/
 
 
