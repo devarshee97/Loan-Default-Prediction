@@ -1,5 +1,5 @@
 # Loan Default Prediction
-The objective in this project is to determing whether a person will default in repaying a certain loan amount based on his financial and some personal details. The dataset is obtained from Kaggle https://www.kaggle.com/c/credit-default-prediction-ai-big-data which is an ogoing competition. 
+The objective in this project is to determing whether a person will default in repaying a certain loan amount based on their financial and some personal details. The dataset is obtained from Kaggle https://www.kaggle.com/c/credit-default-prediction-ai-big-data which is an ogoing competition. 
 
 ## **Personal Overview**:  
 As per my understanding, one of the key challenge in this competition lies in the imbalanced nature of the datasets which is probably common to
